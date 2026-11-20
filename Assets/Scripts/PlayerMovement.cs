@@ -14,9 +14,13 @@ namespace MECHA
 			rb.gravityScale = 0;
 			vida = 3;
 			Global.alive = true;
+			bk.volume = Global.musvol;
 		}
 
-		private void Update()
+		[SerializeField] AudioClip bb;
+        [SerializeField] AudioSource bk;
+
+        private void Update()
 		{if (Global.alive){
 			Movement();
 			Fire();
